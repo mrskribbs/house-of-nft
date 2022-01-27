@@ -8,13 +8,13 @@ const MainNav: NextPage = () => {
 				<img className="logo" src="assets/logo.svg" />
 				<div className="socials">
 					<a href="#">
-						<img className="icon" src="/assets/icon.svg" />
+						<img className="icon" src="/assets/socials/whitepaper.svg" />
 					</a>
 					<a href="#">
-						<img className="icon" src="/assets/discord.svg" />
+						<img className="icon" src="/assets/socials/discord.svg" />
 					</a>
 					<a href="#">
-						<img className="icon" src="/assets/twitter.svg" />
+						<img className="icon" src="/assets/socials/twitter.svg" />
 					</a>
 				</div>
 			</div>

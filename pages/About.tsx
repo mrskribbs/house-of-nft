@@ -5,7 +5,7 @@ const About: NextPage = () => {
 	return (
 		<div className="about-container">
 			<div className="content">
-				<img src="/assets/h.svg" />
+				<img src="/assets/extras/h.svg" />
 				<h2>About The House</h2>
 				<p>
 					The House will be a P2E based game focused on both high level game
@@ -17,29 +17,29 @@ const About: NextPage = () => {
 					build kingdoms together while fostering the growth of our community.
 				</p>
 				<a className="button" href="#">
-					<img className="icon" src="/assets/icon.svg" />
+					<img className="icon" src="/assets/socials/whitepaper.svg" />
 					<span>Read Whitepaper</span>
 				</a>
 			</div>
 			<div className="mosaic">
 				<div className="item">
-					<img src="/assets/painting.png" className="painting" />
+					<img src="/assets/paintings/dagger.png" className="painting" />
 					<div className="item-description">
-						<img src="/assets/dagger-icon.svg" />
+						<img className="icon" src="/assets/icons/dagger.svg" />
 						<span>Dagger</span>
 					</div>
 				</div>
 				<div className="item">
-					<img src="/assets/painting.png" className="painting" />
+					<img src="/assets/paintings/shield.png" className="painting" />
 					<div className="item-description">
-						<img src="/assets/dagger-icon.svg" />
+						<img className="icon" src="/assets/icons/shield.svg" />
 						<span>Shield</span>
 					</div>
 				</div>
 				<div className="item">
-					<img src="/assets/painting.png" className="painting" />
+					<img src="/assets/paintings/swords.png" className="painting" />
 					<div className="item-description">
-						<img src="/assets/dagger-icon.svg" />
+						<img className="icon" src="/assets/icons/swords.svg" />
 						<span>Crossed Swords</span>
 					</div>
 				</div>

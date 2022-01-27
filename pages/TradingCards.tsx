@@ -5,7 +5,7 @@ const TradingCards: NextPage = () => {
 	return (
 		<div className="trading-card-container">
 			<div className="content">
-				<img src="/assets/h.svg" />
+				<img src="/assets/extras/h.svg" />
 				<h2>Trading Card Launch</h2>
 				<p>
 					The House introduces new game mechanics including Crossed Swords,
@@ -18,13 +18,13 @@ const TradingCards: NextPage = () => {
 					the great houses of 14th century Italy.
 				</p>
 				<a className="button" href="#">
-					<img className="icon" src="/assets/icon.svg" />
+					<img className="icon" src="/assets/icons/whitepaper.svg" />
 					<span>Read Whitepaper</span>
 				</a>
 			</div>
 			<div className="stats-container">
 				<div className="stats">
-					<img src="/assets/trading-card.png" />
+					<img src="/assets/trading-cards/swords.png" />
 					<div className="info">
 						<h3>
 							<span className="percent">65%</span>
@@ -38,7 +38,7 @@ const TradingCards: NextPage = () => {
 					</div>
 				</div>
 				<div className="stats">
-					<img src="/assets/trading-card.png" />
+					<img src="/assets/trading-cards/shields.png" />
 					<div className="info">
 						<h3>
 							<span className="percent">25%</span>
@@ -53,7 +53,7 @@ const TradingCards: NextPage = () => {
 				</div>
 
 				<div className="stats">
-					<img src="/assets/trading-card.png" />
+					<img src="/assets/trading-cards/daggers.png" />
 					<div className="info">
 						<h3>
 							<span className="percent">10%</span>

@@ -16,7 +16,7 @@ const Guilds: NextPage = () => {
 			</div>
 			<div className="blocks">
 				<div className="guild stats-container">
-					<img src="/assets/crest.png" />
+					<img src="/assets/guilds/medici.png" />
 					<div className="stats">
 						<h4>
 							The House of <span>Medici</span>
@@ -34,7 +34,7 @@ const Guilds: NextPage = () => {
 					</div>
 				</div>
 				<div className="guild stats-container">
-					<img src="/assets/crest.png" />
+					<img src="/assets/guilds/albizzi.png" />
 
 					<div className="stats">
 						<h4>
@@ -53,7 +53,7 @@ const Guilds: NextPage = () => {
 					</div>
 				</div>
 				<div className="guild stats-container">
-					<img src="/assets/crest.png" />
+					<img src="/assets/guilds/pazzi.png" />
 					<div className="stats">
 						<h4>
 							The House of <span>Pazzi</span>
@@ -71,7 +71,7 @@ const Guilds: NextPage = () => {
 					</div>
 				</div>
 				<div className="guild stats-container">
-					<img src="/assets/crest.png" />
+					<img src="/assets/guilds/borgia.png" />
 					<div className="stats">
 						<h4>
 							The House of <span>Borgia</span>

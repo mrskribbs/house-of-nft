@@ -108,7 +108,7 @@ a {
 	height: 100vh;
 	width: 100vw;
 	margin: 0 -2em;
-	background: #000 url('/assets/hero-back-min.png') bottom center;
+	background: #000 url('/assets/backgrounds/hero-back-min.png') bottom center;
 	background-size: cover;
 
 	.thing {
@@ -174,7 +174,7 @@ a {
 }
 .hero-footer {
 	max-width: $max-container-width;
-	margin: 0 auto;
+	margin: 100px auto;
 	.hero-text {
 		margin: 0 auto;
 	}
@@ -250,8 +250,26 @@ a {
 				width: 50%;
 				max-width: 300px;
 				flex: 1 1 auto;
-				background: url('/assets/island.png');
-				background-size: cover;
+				&.islands {
+					background-image: url('/assets/terrain/island.png');
+					background-size: cover;
+				}
+				&.grass {
+					background: url('/assets/terrain/grass.png');
+					background-size: cover;
+				}
+				&.lowlands {
+					background: url('/assets/terrain/lowlands.png');
+					background-size: cover;
+				}
+				&.mountains {
+					background: url('/assets/terrain/mountains.png');
+					background-size: cover;
+				}
+				&.marshes {
+					background: url('/assets/terrain/marshes.png');
+					background-size: cover;
+				}
 			}
 			.stats {
 				width: 50%;
@@ -332,7 +350,7 @@ a {
 		justify-content: center;
 		height: 70vw;
 		max-height: 790px;
-		background-image: url('/assets/mosaic-background.svg');
+		background-image: url('/assets/backgrounds/mosaic-background.svg');
 		background-position: 50% 100%;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -346,6 +364,10 @@ a {
 				align-items: center;
 				justify-content: center;
 				margin: 1em;
+				.icon {
+					width: 50px;
+					height: 50px;
+				}
 				span {
 					margin-left: 1em;
 				}
@@ -414,7 +436,7 @@ a {
 	width: 100vw;
 	height: 90vh;
 	margin: 0 -2em;
-	background: #000 url('/assets/roadmap.png') center center;
+	background: #000 url('/assets/backgrounds/roadmap.png') center center;
 	background-size: cover;
 }
 

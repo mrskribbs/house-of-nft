@@ -15,7 +15,7 @@ const Terrain: NextPage = () => {
 			</div>
 			<div className="blocks">
 				<div className="terrain stats-container">
-					<div className='image'/>
+					<div className='image islands'/>
 					<div className="stats">
 						<h4>Islands</h4>
 						<p>
@@ -30,7 +30,7 @@ const Terrain: NextPage = () => {
 					</div>
 				</div>
 				<div className="terrain stats-container">
-					<div className='image'/>
+					<div className='image grass'/>
 					<div className="stats">
 						<h4>Grassy Plains</h4>
 						<p>
@@ -45,7 +45,7 @@ const Terrain: NextPage = () => {
 					</div>
 				</div>
 				<div className="terrain stats-container">
-					<div className='image'/>
+					<div className='image lowlands'/>
 					<div className="stats">
 						<h4>Coastal Lowlands</h4>
 						<p>
@@ -60,7 +60,7 @@ const Terrain: NextPage = () => {
 					</div>
 				</div>
 				<div className="terrain stats-container">
-					<div className='image'/>
+					<div className='image mountains'/>
 					<div className="stats">
 						<h4>Rugged Mountains</h4>
 						<p>
@@ -75,7 +75,7 @@ const Terrain: NextPage = () => {
 					</div>
 				</div>
 				<div className="terrain stats-container">
-					<div className='image'/>
+					<div className='image marshes'/>
 					<div className="stats">
 						<h4>Marshes</h4>
 						<p>

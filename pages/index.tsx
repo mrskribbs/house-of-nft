@@ -22,9 +22,9 @@ const Home: NextPage = () => {
 			<About />
 			<RoadMap />
 			<TradingCards />
-			<img className="divider" src="/assets/divider.svg" />
+			<img className="divider" src="/assets/extras/divider.svg" />
 			<Guilds />
-			<img className="divider" src="/assets/divider.svg" />
+			<img className="divider" src="/assets/extras/divider.svg" />
 			<Terrain />
 
 			<div className="hero-footer">
@@ -36,15 +36,15 @@ const Home: NextPage = () => {
 
 				<div className="actions">
 					<a className="button" href="#">
-						<img className="icon" src="/assets/icon.svg" />
+						<img className="icon" src="/assets/socials/whitepaper.svg" />
 						<span>Read Whitepaper</span>
 					</a>
 					<a className="button" href="#">
-						<img className="icon" src="/assets/discord.svg" />
+						<img className="icon" src="/assets/socials/discord.svg" />
 						<span>Join Discord</span>
 					</a>
 					<a className="button" href="#">
-						<img className="icon" src="/assets/twitter.svg" />
+						<img className="icon" src="/assets/socials/twitter.svg" />
 						<span>Follow Twitter</span>
 					</a>
 				</div>
