@@ -1,0 +1,391 @@
+$grey: #666;
+$white: #f4f4f4;
+$black: hsl(0, 0%, 3%);
+$yellow: #f2bf63;
+
+$serif: 'Sangbleukingdom', Times;
+$sans-serif: 'Roboto Mono';
+
+$max-container-width: 1200px;
+$max-content-width: 600px;
+$h-margins: 20px;
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: $sans-serif, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+		Droid Sans, Helvetica Neue, sans-serif;
+	background: $black;
+	color: $grey;
+	font-size: 10pt;
+	line-height: 2em;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h2 {
+	color: $yellow;
+	font-family: $serif;
+	font-size: 2.5em;
+	margin: 1em auto 0.5em auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.actions {
+	margin: $h-margins 0;
+}
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	border: 2px solid white;
+	border-radius: 1000px;
+	color: white;
+	.icon {
+		width: 30px;
+		height: 30px;
+		margin-right: 20px;
+	}
+}
+
+.divider {
+	margin: 5em auto;
+	width: calc(100% - 1em);
+}
+
+//Shared
+.stats-container {
+	border: 1px solid #ccc;
+	margin: 2em $h-margins;
+	border-radius: 2em;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+
+	.stats {
+		padding: 1.5em 2em;
+
+		h4 {
+			font-size: 1.6em;
+			line-height: 1.2em;
+			margin: 0.5em 0;
+			color: $yellow;
+			font-family: $serif;
+		}
+
+		strong,
+		p span {
+			color: #ccc;
+		}
+		p {
+			margin: 0.5em 0;
+		}
+	}
+}
+.about-container,
+.trading-card-container,
+.terrain-container,
+.guild-container {
+	max-width: $max-container-width;
+	margin: 0 auto;
+}
+.terrain-container {
+	.content {
+		max-width: 600px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.blocks {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0 auto;
+		.terrain {
+			&:last-child:nth-child(odd) {
+				grid-column: 1 / span 2;
+				width: 50%;
+				margin: 2em auto;
+			}
+			.image {
+				display: block;
+				width: 50%;
+				max-width: 300px;
+				flex: 1 1 auto;
+				background: url('/assets/island.png');
+				background-size: cover;
+			}
+			.stats {
+				width: 50%;
+			}
+		}
+	}
+}
+.guild-container {
+	.content {
+		max-width: 600px;
+		text-align: center;
+		margin: 5em auto;
+	}
+	.blocks {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		margin: 2em $h-margins;
+		grid-gap: 50px;
+		margin: 0 auto;
+		.guild {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+
+			img {
+				display: block;
+				padding: 30px 30px 0 30px;
+			}
+			.stats {
+				text-align: center;
+				margin: 0 auto;
+
+				h4 {
+					color: $white;
+					font-size: 1.4em;
+					line-height: 1.6em;
+					span {
+						color: $yellow;
+						display: block;
+						font-size: 1.9em;
+					}
+				}
+			}
+			strong {
+				color: #ccc;
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+.about-container,
+.trading-card-container {
+	display: flex;
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		h2,
+		p {
+			margin-left: 0;
+			text-align: left;
+		}
+	}
+}
+.about-container {
+	> div {
+		width: 50%;
+	}
+	.mosaic {
+		position: relative;
+		margin: 20px;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		height: 70vw;
+		max-height: 790px;
+		background-image: url('/assets/mosaic-background.svg');
+		background-position: 50% 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		.item {
+			position: relative;
+			.painting {
+				max-width: 100%;
+			}
+			.item-description {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 1em;
+				span {
+					margin-left: 1em;
+				}
+			}
+			&:nth-child(1) {
+				width: 30%;
+				left: 7%;
+			}
+			&:nth-child(2) {
+				width: 40%;
+			}
+			&:nth-child(3) {
+				top: 3%;
+				width: 50%;
+			}
+		}
+	}
+}
+.trading-card-container {
+	.stats-container {
+		border: none;
+		display: block;
+		.stats {
+			display: grid;
+			grid-template-columns: 200px 1fr;
+			align-items: center;
+			justify-content: center;
+			img {
+				max-width: 100%;
+				height: auto;
+				padding: 0 50px;
+			}
+			.info h3 {
+				color: $yellow;
+				font-family: serif;
+				.percent {
+					font-size: 2.5em;
+					color: $white;
+				}
+				.type {
+					padding: 5px;
+					text-transform: uppercase;
+					&.common {
+						color: #99cc33;
+					}
+					&.uncommon {
+						color: #0099cc;
+					}
+					&.rare {
+						color: #990099;
+					}
+				}
+				.title {
+					display: block;
+				}
+			}
+		}
+	}
+	& > div {
+		width: 50%;
+		margin: 20px $h-margins;
+	}
+}
+
+.roadmap-container {
+	width: 100vw;
+	height: 90vh;
+	margin: 0 -2em;
+	background: #000 url('/assets/roadmap.png') center center;
+	background-size: cover;
+}
+@media (max-width: 900px) {
+	.trading-card-container {
+		flex-direction: column;
+		& > div {
+			width: calc(100% - ($h-margins * 2));
+			&.content {
+				order: 2;
+				h2,
+				p {
+					text-align: center;
+					margin-left: auto;
+				}
+				.button {
+					margin: 2em auto;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.about-container {
+		flex-direction: column;
+		.content {
+			width: 100%;
+			order: 2;
+			h2,
+			p {
+				text-align: center;
+				margin-left: auto;
+			}
+			.button {
+				margin: 2em auto;
+				text-align: center;
+			}
+		}
+		.mosaic {
+			margin: 0;
+			padding: 0;
+			order: 1;
+			width: 100%;
+			height: 120vw;
+			max-height: 1000px;
+		}
+	}
+	.guild-container .blocks {
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 4em;
+	}
+	.terrain-container {
+		& > .content {
+			margin: 5em auto;
+		}
+		.blocks {
+			display: block;
+			.terrain {
+				&,
+				&:last-child:nth-child(odd) {
+					width: 100%;
+					margin: 2em auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 560px) {
+	.guild-container .blocks {
+		grid-template-columns: 1fr;
+	}
+	.about-container .mosaic {
+		margin: 0;
+		padding: 0;
+		height: 140vw;
+		// max-height:100%;
+		// flex-direction: row;
+		.item {
+			// &:nth-child(1),
+			// &:nth-child(2),
+			&:nth-child(3) {
+				top: 0;
+				left: 0;
+				width: 60%;
+			}
+		}
+	}
+	.trading-card-container .stats-container .stats {
+		&,
+		& .type {
+			display: block;
+			text-align: center;
+		}
+	}
+	.terrain-container .blocks .terrain {
+		flex-direction: column;
+		.stats {
+			width: 100%;
+			text-align: center;
+		}
+		.image {
+			height: 50vw;
+			width: 100%;
+			text-align: center;
+			max-width: 100%;
+		}
+	}
+}
