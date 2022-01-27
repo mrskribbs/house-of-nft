@@ -53,7 +53,7 @@ a {
 	padding: 10px 20px;
 	border: 2px solid white;
 	border-radius: 1000px;
-	color: white;
+	color: $white;
 	.icon {
 		width: 30px;
 		height: 30px;
@@ -474,10 +474,38 @@ a {
 
 .roadmap-container {
 	width: 100vw;
-	height: 90vh;
+	height: auto;
 	margin: 0 -2em;
-	background: #000 url('/assets/backgrounds/roadmap.png') center center;
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.7) 0%,
+			rgba(0, 0, 0, 0) 35%,
+			rgba(0, 0, 0, 0) 100%
+		),
+		url('/assets/backgrounds/roadmap.png') bottom center;
 	background-size: cover;
+	h2 {
+		text-align: center;
+		margin: 0 auto;
+		padding: 50px 0;
+		color: $white;
+		span {
+			color: $yellow;
+		}
+	}
+	.sword-container {
+		width: 100%;
+		height: auto;
+		.sword {
+			position: relative;
+			width: 100%;
+			height: auto;
+			&.top,
+			&.bottom {
+				display: none;
+			}
+		}
+	}
 }
 
 .footer {
@@ -496,6 +524,25 @@ a {
 }
 
 @media (max-width: 900px) {
+	.roadmap-container {
+		.sword-container {
+			width: 100%;
+			height: auto;
+			.sword {
+				position: relative;
+				width: 100%;
+				height: auto;
+				&.full {
+					display: none;
+				}
+				&.top,
+				&.bottom {
+					display: block;
+				}
+			}
+		}
+	}
+
 	.hero-wrapper {
 		height: auto;
 		padding: 20vh 1em;
@@ -534,7 +581,7 @@ a {
 			width: calc(100% - ($h-margins * 2));
 			&.content {
 				order: 2;
-				>img {
+				> img {
 					text-align: center;
 					margin: 0 auto;
 				}
