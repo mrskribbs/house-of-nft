@@ -8,6 +8,7 @@ import TradingCards from './TradingCards'
 import Guilds from './Guilds'
 import Terrain from './Terrain'
 import RoadMap from './RoadMap'
+import FooterNav from './FooterNav'
 
 const Home: NextPage = () => {
 	return (
@@ -50,6 +51,7 @@ const Home: NextPage = () => {
 				</div>
 			</div>
 
+			<FooterNav />
 			<footer className="footer">
 				<a href="https://skribbs.com" target="_blank" rel="noopener noreferrer">
 					Powered by{' '}

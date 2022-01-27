@@ -5,7 +5,7 @@ const TradingCards: NextPage = () => {
 	return (
 		<div className="trading-card-container">
 			<div className="content">
-				<img src="/assets/extras/h.svg" />
+				<img src="/assets/h.svg" />
 				<h2>Trading Card Launch</h2>
 				<p>
 					The House introduces new game mechanics including Crossed Swords,
@@ -18,7 +18,7 @@ const TradingCards: NextPage = () => {
 					the great houses of 14th century Italy.
 				</p>
 				<a className="button" href="#">
-					<img className="icon" src="/assets/icons/whitepaper.svg" />
+					<img className="icon" src="/assets/socials/whitepaper.svg" />
 					<span>Read Whitepaper</span>
 				</a>
 			</div>

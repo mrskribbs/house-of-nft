@@ -5,7 +5,7 @@ const About: NextPage = () => {
 	return (
 		<div className="about-container">
 			<div className="content">
-				<img src="/assets/extras/h.svg" />
+				<img src="/assets/h.svg" />
 				<h2>About The House</h2>
 				<p>
 					The House will be a P2E based game focused on both high level game
