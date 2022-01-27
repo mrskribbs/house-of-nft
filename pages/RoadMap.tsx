@@ -7,10 +7,10 @@ const RoadMap: NextPage = () => {
 				Roadmap <span>Q1</span>
 			</h2>
 			<div className="sword-container">
-			<img className='sword full' src="/assets/roadmap/full-sword.png" />
+				<img className='sword full' src="/assets/roadmap/full-sword.png" />
 				<img className="sword top" src="/assets/roadmap/top-sword.png" />
 				<img className="sword bottom" src="/assets/roadmap/bottom-sword.png" />
-			</div>{' '}
+			</div>
 		</div>
 	)
 }
