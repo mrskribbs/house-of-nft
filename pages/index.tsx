@@ -1,14 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import MainNav from './MainNav'
-import Hero from './Hero'
-import About from './About'
-import TradingCards from './TradingCards'
-import Guilds from './Guilds'
-import Terrain from './Terrain'
-import RoadMap from './RoadMap'
-import FooterNav from './FooterNav'
+
+import MainNav from './sections/MainNav'
+import Hero from './sections/Hero'
+import About from './sections/About'
+import TradingCards from './sections/TradingCards'
+import Guilds from './sections/Guilds'
+import Terrain from './sections/Terrain'
+import RoadMap from './sections/RoadMap'
+import Footer from './sections/Footer'
+
 
 const Home: NextPage = () => {
 	return (
@@ -27,42 +28,7 @@ const Home: NextPage = () => {
 			<Guilds />
 			<img className="divider" src="/assets/extras/divider.svg" />
 			<Terrain />
-
-			<div className="hero-footer">
-				<h1 className="hero-text">
-					Fine Art,
-					<span>Cultural Exploration,</span>
-					Technological Innovation.
-				</h1>
-
-				<div className="actions">
-					<a className="button" href="#">
-						<img className="icon" src="/assets/socials/whitepaper.svg" />
-						<span>Read Whitepaper</span>
-					</a>
-					<a className="button" href="#">
-						<img className="icon" src="/assets/socials/discord.svg" />
-						<span>Join Discord</span>
-					</a>
-					<a className="button" href="#">
-						<img className="icon" src="/assets/socials/twitter.svg" />
-						<span>Follow Twitter</span>
-					</a>
-				</div>
-			</div>
-
-			<FooterNav />
-			<footer className="footer">
-				<a href="https://skribbs.com" target="_blank" rel="noopener noreferrer">
-					Powered by{' '}
-					<Image
-						src="/assets/skribbs.svg"
-						alt="Skribbs Logo"
-						width={100}
-						height={24}
-					/>
-				</a>
-			</footer>
+			<Footer />
 		</div>
 	)
 }

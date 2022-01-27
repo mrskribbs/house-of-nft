@@ -1,14 +1,4 @@
-$grey: #666;
-$white: #f4f4f4;
-$black: hsl(0, 0%, 3%);
-$yellow: #f2bf63;
-
-$serif: 'Sangbleukingdom', Times;
-$sans-serif: 'Roboto Mono';
-
-$max-container-width: 1200px;
-$max-content-width: 600px;
-$h-margins: 20px;
+@import './variables.scss';
 
 html,
 body {
@@ -654,11 +644,7 @@ a {
 		margin: 0;
 		padding: 0;
 		height: 140vw;
-		// max-height:100%;
-		// flex-direction: row;
 		.item {
-			// &:nth-child(1),
-			// &:nth-child(2),
 			&:nth-child(3) {
 				top: 0;
 				left: 0;
