@@ -1,6 +1,23 @@
 import type { NextPage } from 'next'
 
 const About: NextPage = () => {
+	const data = [
+		{
+			image: '/assets/paintings/dagger.png',
+			icon: '/assets/icons/dagger.svg',
+			title: 'Dagger',
+		},
+		{
+			image: '/assets/paintings/shield.png',
+			icon: '/assets/icons/shield.svg',
+			title: 'Shield',
+		},
+		{
+			image: '/assets/paintings/swords.png',
+			icon: '/assets/icons/swords.svg',
+			title: 'Crossed Swords',
+		},
+	]
 	return (
 		<div className="about-container">
 			<div className="content">
@@ -21,27 +38,17 @@ const About: NextPage = () => {
 				</a>
 			</div>
 			<div className="mosaic">
-				<div className="item">
-					<img src="/assets/paintings/dagger.png" className="painting" />
-					<div className="item-description">
-						<img className="icon" src="/assets/icons/dagger.svg" />
-						<span>Dagger</span>
-					</div>
-				</div>
-				<div className="item">
-					<img src="/assets/paintings/shield.png" className="painting" />
-					<div className="item-description">
-						<img className="icon" src="/assets/icons/shield.svg" />
-						<span>Shield</span>
-					</div>
-				</div>
-				<div className="item">
-					<img src="/assets/paintings/swords.png" className="painting" />
-					<div className="item-description">
-						<img className="icon" src="/assets/icons/swords.svg" />
-						<span>Crossed Swords</span>
-					</div>
-				</div>
+				{data.map((item) => {
+					return (
+						<div className="item">
+							<img src={item.image} className="painting" />
+							<div className="item-description">
+								<img className="icon" src={item.icon} />
+								<span>{item.title}</span>
+							</div>
+						</div>
+					)
+				})}
 			</div>
 		</div>
 	)
