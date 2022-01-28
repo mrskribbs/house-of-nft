@@ -93,46 +93,7 @@ a {
 		}
 	}
 }
-.footer-nav-wrapper {
-	width: 100%;
-	height: 150px;
-	background-color: rgba(0, 0, 0, 0.25);
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
 
-	.footer-nav {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		max-width: $max-container-width;
-		padding: 20px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		.thing {
-			width: 50px;
-			height: 50px;
-		}
-		.logo {
-			height: 100%;
-			width: auto;
-			display: flex;
-			align-items: center;
-			.wordmark {
-				margin-left: 50px;
-			}
-		}
-		.socials {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			a {
-				padding: 10px;
-			}
-		}
-	}
-}
 .hero-wrapper {
 	height: 100vh;
 	width: 100vw;
@@ -258,97 +219,6 @@ a {
 	max-width: $max-container-width;
 	margin: 0 auto;
 }
-.terrain-container {
-	.content {
-		max-width: 600px;
-		text-align: center;
-		margin: 0 auto;
-	}
-	.blocks {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		margin: 0 auto;
-		.terrain {
-			&:last-child:nth-child(odd) {
-				grid-column: 1 / span 2;
-				width: 50%;
-				margin: 2em auto;
-			}
-			.image {
-				display: block;
-				width: 50%;
-				max-width: 300px;
-				flex: 1 1 auto;
-				&.islands {
-					background-image: url('/assets/terrain/island.png');
-					background-size: cover;
-				}
-				&.grass {
-					background: url('/assets/terrain/grass.png');
-					background-size: cover;
-				}
-				&.lowlands {
-					background: url('/assets/terrain/lowlands.png');
-					background-size: cover;
-				}
-				&.mountains {
-					background: url('/assets/terrain/mountains.png');
-					background-size: cover;
-				}
-				&.marshes {
-					background: url('/assets/terrain/marshes.png');
-					background-size: cover;
-				}
-			}
-			.stats {
-				width: 50%;
-			}
-		}
-	}
-}
-.guild-container {
-	.content {
-		max-width: 600px;
-		text-align: center;
-		margin: 5em auto;
-	}
-	.blocks {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		margin: 2em $h-margins;
-		grid-gap: 50px;
-		margin: 0 auto;
-		.guild {
-			display: flex;
-			flex-direction: column;
-			margin: 0;
-
-			img {
-				display: block;
-				padding: 30px 30px 0 30px;
-			}
-			.stats {
-				text-align: center;
-				margin: 0 auto;
-
-				h4 {
-					color: $white;
-					font-size: 1.4em;
-					line-height: 1.6em;
-					span {
-						color: $yellow;
-						display: block;
-						font-size: 1.9em;
-					}
-				}
-			}
-			strong {
-				color: #ccc;
-				font-weight: 300;
-			}
-		}
-	}
-}
 
 .about-container,
 .trading-card-container {
@@ -416,6 +286,42 @@ a {
 		}
 	}
 }
+
+.roadmap-container {
+	width: 100vw;
+	height: auto;
+	margin: 0 -2em;
+	background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.7) 0%,
+			rgba(0, 0, 0, 0) 35%,
+			rgba(0, 0, 0, 0) 100%
+		),
+		url('/assets/backgrounds/roadmap.png') bottom center;
+	background-size: cover;
+	h2 {
+		text-align: center;
+		margin: 0 auto;
+		padding: 50px 0;
+		color: $white;
+		span {
+			color: $yellow;
+		}
+	}
+	.sword-container {
+		width: 100%;
+		height: auto;
+		.sword {
+			position: relative;
+			width: 100%;
+			height: auto;
+			&.top,
+			&.bottom {
+				display: none;
+			}
+		}
+	}
+}
 .trading-card-container {
 	.stats-container {
 		border: none;
@@ -461,43 +367,138 @@ a {
 		margin: 20px $h-margins;
 	}
 }
-
-.roadmap-container {
-	width: 100vw;
-	height: auto;
-	margin: 0 -2em;
-	background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0.7) 0%,
-			rgba(0, 0, 0, 0) 35%,
-			rgba(0, 0, 0, 0) 100%
-		),
-		url('/assets/backgrounds/roadmap.png') bottom center;
-	background-size: cover;
-	h2 {
+.guild-container {
+	.content {
+		max-width: 600px;
 		text-align: center;
+		margin: 5em auto;
+	}
+	.blocks {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		margin: 2em $h-margins;
+		grid-gap: 50px;
 		margin: 0 auto;
-		padding: 50px 0;
-		color: $white;
-		span {
-			color: $yellow;
+		.guild {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+
+			img {
+				display: block;
+				padding: 30px 30px 0 30px;
+			}
+			.stats {
+				text-align: center;
+				margin: 0 auto;
+
+				h4 {
+					color: $white;
+					font-size: 1.4em;
+					line-height: 1.6em;
+					span {
+						color: $yellow;
+						display: block;
+						font-size: 1.9em;
+					}
+				}
+			}
+			strong {
+				color: #ccc;
+				font-weight: 300;
+			}
 		}
 	}
-	.sword-container {
-		width: 100%;
-		height: auto;
-		.sword {
-			position: relative;
-			width: 100%;
-			height: auto;
-			&.top,
-			&.bottom {
-				display: none;
+}
+.terrain-container {
+	.content {
+		max-width: 600px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.blocks {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0 auto;
+		.terrain {
+			&:last-child:nth-child(odd) {
+				grid-column: 1 / span 2;
+				width: 50%;
+				margin: 2em auto;
+			}
+			.image {
+				display: block;
+				width: 50%;
+				max-width: 300px;
+				flex: 1 1 auto;
+				&.islands {
+					background-image: url('/assets/terrain/island.png');
+					background-size: cover;
+				}
+				&.grass {
+					background: url('/assets/terrain/grass.png');
+					background-size: cover;
+				}
+				&.lowlands {
+					background: url('/assets/terrain/lowlands.png');
+					background-size: cover;
+				}
+				&.mountains {
+					background: url('/assets/terrain/mountains.png');
+					background-size: cover;
+				}
+				&.marshes {
+					background: url('/assets/terrain/marshes.png');
+					background-size: cover;
+				}
+			}
+			.stats {
+				width: 50%;
 			}
 		}
 	}
 }
 
+.footer-nav-wrapper {
+	width: 100%;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.25);
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+
+	.footer-nav {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		max-width: $max-container-width;
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.thing {
+			width: 50px;
+			height: 50px;
+		}
+		.logo {
+			height: 100%;
+			width: auto;
+			display: flex;
+			align-items: center;
+			.wordmark {
+				margin-left: 50px;
+			}
+		}
+		.socials {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			a {
+				padding: 10px;
+			}
+		}
+	}
+}
 .footer {
 	display: flex;
 	flex: 1;
@@ -514,25 +515,6 @@ a {
 }
 
 @media (max-width: 900px) {
-	.roadmap-container {
-		.sword-container {
-			width: 100%;
-			height: auto;
-			.sword {
-				position: relative;
-				width: 100%;
-				height: auto;
-				&.full {
-					display: none;
-				}
-				&.top,
-				&.bottom {
-					display: block;
-				}
-			}
-		}
-	}
-
 	.hero-wrapper {
 		height: auto;
 		padding: 20vh 1em;
@@ -562,31 +544,6 @@ a {
 		}
 	}
 
-	.footer-nav-wrapper .footer-nav .thing {
-		display: none;
-	}
-	.trading-card-container {
-		flex-direction: column;
-		& > div {
-			width: calc(100% - ($h-margins * 2));
-			&.content {
-				order: 2;
-				> img {
-					text-align: center;
-					margin: 0 auto;
-				}
-				h2,
-				p {
-					text-align: center;
-					margin-left: auto;
-				}
-				.button {
-					margin: 2em auto;
-					text-align: center;
-				}
-			}
-		}
-	}
 	.about-container {
 		flex-direction: column;
 		.content {
@@ -615,6 +572,46 @@ a {
 			max-height: 1000px;
 		}
 	}
+	.roadmap-container {
+		.sword-container {
+			width: 100%;
+			height: auto;
+			.sword {
+				position: relative;
+				width: 100%;
+				height: auto;
+				&.full {
+					display: none;
+				}
+				&.top,
+				&.bottom {
+					display: block;
+				}
+			}
+		}
+	}
+	.trading-card-container {
+		flex-direction: column;
+		& > div {
+			width: calc(100% - ($h-margins * 2));
+			&.content {
+				order: 2;
+				> img {
+					text-align: center;
+					margin: 0 auto;
+				}
+				h2,
+				p {
+					text-align: center;
+					margin-left: auto;
+				}
+				.button {
+					margin: 2em auto;
+					text-align: center;
+				}
+			}
+		}
+	}
 	.guild-container .blocks {
 		grid-template-columns: 1fr 1fr;
 		margin-bottom: 4em;
@@ -634,12 +631,13 @@ a {
 			}
 		}
 	}
+	.footer-nav-wrapper .footer-nav .thing {
+		display: none;
+	}
+	
 }
 
 @media (max-width: 560px) {
-	.guild-container .blocks {
-		grid-template-columns: 1fr;
-	}
 	.about-container .mosaic {
 		margin: 0;
 		padding: 0;
@@ -658,6 +656,9 @@ a {
 			display: block;
 			text-align: center;
 		}
+	}
+	.guild-container .blocks {
+		grid-template-columns: 1fr;
 	}
 	.terrain-container .blocks .terrain {
 		flex-direction: column;
